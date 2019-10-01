@@ -46,3 +46,22 @@ service nginx -v
 ```
 service nginx -h
 ```
+___
+___
+___
+## Configuration
+```
+ls /etc/nginx
+```
+## Config file
+```
+ls /etc/nginx/nginx.comf
+```
+## sites enabled
+```
+ ls /etc/nginx/sites-enabled/
+```
+## sites available
+```
+ ls /etc/nginx/sites-available/
+```
