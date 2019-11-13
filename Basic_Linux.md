@@ -19,3 +19,7 @@ mkdir my_new_dir
 netstat -ano
 taskkill /f /im [PID of the port u wanna kill]
 ```
+## remove folder
+```
+sudo rm -r [folder name]
+```
