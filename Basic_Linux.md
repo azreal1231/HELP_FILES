@@ -1,4 +1,4 @@
-## remove file or directory
+## remove file
 ```
 rm 
 rm -r /temp/backup
@@ -6,6 +6,10 @@ rm -r /temp/backup
 
 ## make directory
 ```
-rm 
 mkdir my_new_dir
+```
+
+## remove directory
+```
+
 ```
