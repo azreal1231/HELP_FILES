@@ -13,3 +13,9 @@ mkdir my_new_dir
 ```
 
 ```
+
+## clear port
+```
+netstat -ano
+taskkill /f /im [PID of the port u wanna kill]
+```
