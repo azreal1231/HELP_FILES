@@ -1,3 +1,15 @@
+## installs Fish terminal
+```
+* sudo apt-add-repository ppa:fish-shell/release-2
+
+* sudo apt-get update
+
+* sudo apt-get install fish
+
+* fish
+
+```
+
 ## installs python3
 ```
 sudo apt install python3-pip
@@ -6,6 +18,15 @@ sudo apt install python3-pip
 ## installs nginx
 ```
 sudo apt install nginx
+```
+
+## installs git
+```
+* sudo apt-get install git
+
+* sudo apt-get update
+
+
 ```
 
 ## installs couchdb
@@ -47,7 +68,8 @@ sudo snap install code --classic
 ```
 sudo snap install gitkraken
 ```
-## installs gitkraken
+
+## installs discord
 ```
-sudo snap install gitkraken
+sudo snap install discord
 ```
