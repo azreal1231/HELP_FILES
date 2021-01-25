@@ -1,3 +1,8 @@
+* ##   Install CouchDB
+    *  [Install CouchDB](https://linuxhint.com/install_couchdb_ubuntu/)
+
+
+
 * ##   view all the DB's
 ```
 curl -X GET http://127.0.0.1:5984/_all_dbs
