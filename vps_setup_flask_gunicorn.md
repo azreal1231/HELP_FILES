@@ -12,7 +12,7 @@ source venv/bin/activate
 pip install wheel
 pip install gunicorn flask
 
-#pip install -r requirements.txt
+pip install -r requirements.txt
 
 
 sudo nano /etc/nginx/sites-available/PROJECTNAME
