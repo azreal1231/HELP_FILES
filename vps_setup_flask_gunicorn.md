@@ -56,3 +56,10 @@
 * sudo ufw allow 'Nginx Full'
 >Stats the Python App 
 * gunicorn --bind 0.0.0.0:5000 [MainFileName]:app
+
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt install python-certbot-nginx
+sudo certbot --nginx -d your_domain -d www.your_domain
+sudo ufw delete allow 'Nginx HTTP'
+
+
