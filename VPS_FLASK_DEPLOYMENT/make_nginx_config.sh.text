@@ -1,0 +1,42 @@
+#!/bin/bash
+# Ask the user for their name
+
+echo ==============================
+echo --------nginx-script----------
+echo ==============================
+
+
+echo Enter Your App Name"Project Name":
+read  project_name
+
+echo Enter Your DomainName:
+read  domain_name
+
+file=/etc/nginx/sites-available/$project_name
+
+echo "upstream gunicornapp{" > $file
+echo "server 127.0.0.1:8000;" >> $file
+echo "}" >> $file
+
+
+echo "server{" >> $file
+echo "listen 80;" >> $file
+echo "server_name $domain_name www.$domain_name" >> $file
+echo "" >> $file
+echo "location / {" >> $file
+echo "include proxy_params;" >> $file
+echo "proxy_pass http://gunicornapp;" >> $file
+echo "}" >> $file
+echo "" >> $file
+echo "location /static/.(js|css|png|jpg|jpeg|gif|ico)$ {" >> $file
+echo "expires max;" >> $file
+echo "log_not_found off;" >> $file
+echo "}" >> $file
+
+ln -s /etc/nginx/sites-available/$project_name /etc/nginx/sites-enabled
+
+sudo nginx -t
+
+systemctl restart nginx
+
+ufw allow 'Nginx Full'

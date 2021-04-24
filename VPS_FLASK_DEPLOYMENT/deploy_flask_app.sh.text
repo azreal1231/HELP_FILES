@@ -1,0 +1,27 @@
+#!/bin/bash
+echo ============================================
+echo --------SlateLight-Deploy-Flask-App---------
+echo ============================================
+echo ____________________________________________
+sudo apt update
+sudo apt install nginx
+sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
+sudo apt install python3-venv
+
+echo Enter Git Repo-Link
+read  repo_link
+git clone $repo_link
+
+
+echo Enter Repo-Name
+read  repo_name
+cd $repo_name
+
+python3.8 -m venv venv
+source venv/bin/activate
+pip install wheel
+pip install gunicorn flask
+
+cd ..
+
+bash make_nginx_config.sh
