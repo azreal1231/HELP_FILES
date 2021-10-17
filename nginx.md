@@ -65,3 +65,31 @@ ls /etc/nginx/nginx.comf
 ```
  ls /etc/nginx/sites-available/
 ```
+
+
+## set access to share another Web UI
+```
+nano /etc/nginx/sites-available/couch
+
+
+server {
+    listen 80;
+    server_name 147.182.138.232 www.147.182.138.232;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://127.0.0.1:5984;
+    }
+}
+```
+
+## WhiteList external IP and blacklist all others
+```
+sudo nano /etc/nginx/nginx.conf
+
+http{
+	allow 197.245.218.239;
+	allow another IP
+	deny all;
+}
+```
